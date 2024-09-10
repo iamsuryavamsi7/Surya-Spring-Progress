@@ -1,0 +1,24 @@
+# Configuration for Tomcat Server Embedded
+
+server:
+  port: 7777
+
+# Configuration for Postgresql JDBC
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_data_jpa
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+# Configuration for Postgresql Hibernate
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
